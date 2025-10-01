@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta datos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Kevin Acarapi">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Título -->
+    <title>Document</title>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full z-50 py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="logo-container">
+                    <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Sol parcialmente escondido -->
+                        <circle cx="95" cy="5" r="6" fill="#F9D71C" class="sun-rays" opacity="0.9" />
+                        
+                        <!-- Rayos del sol -->
+                        <g class="sun-rays">
+                            <line x1="95" y1="-2" x2="95" y2="-5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            <line x1="95" y1="12" x2="95" y2="15" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            <line x1="88" y1="5" x2="85" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            <line x1="102" y1="5" x2="105" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            <line x1="90" y1="0" x2="87" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            <line x1="100" y1="10" x2="103" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            <line x1="90" y1="10" x2="87" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            <line x1="100" y1="0" x2="103" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                        </g>
+                        
+                        <!-- Texto Nuvexar -->
+                        <text x="10" y="25" font-family="Poppins, sans-serif" font-size="24" font-weight="700">
+                            <tspan fill="#FFFFFF">Nuvex</tspan><tspan fill="#60A5FA">ar</tspan>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-blue-300 transition-colors">Inicio</a>
+                <a href="#servicios" class="text-white hover:text-blue-300 transition-colors">Servicios</a>
+                <a href="#nosotros" class="text-white hover:text-blue-300 transition-colors">Quiénes Somos</a>
+                <a href="#contacto" class="text-white hover:text-blue-300 transition-colors">Contacto</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="hamburger">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-[#0f2c59] py-8 px-6 md:hidden">
+            <div class="flex flex-col space-y-6 items-center">
+                <a href="#home" class="text-white hover:text-blue-300 transition-colors">Inicio</a>
+                <a href="#servicios" class="text-white hover:text-blue-300 transition-colors">Servicios</a>
+                <a href="#nosotros" class="text-white hover:text-blue-300 transition-colors">Quiénes Somos</a>
+                <a href="#contacto" class="text-white hover:text-blue-300 transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Bubbles -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-20 relative">
+        <!-- Decorative Bubbles -->
+        <div class="bubble" style="width: 150px; height: 150px; top: 20%; left: 10%; animation-delay: 0s; animation-duration: 15s;"></div>
+        <div class="bubble" style="width: 80px; height: 80px; top: 30%; right: 20%; animation-delay: 2s; animation-duration: 12s;"></div>
+        <div class="bubble" style="width: 60px; height: 60px; bottom: 20%; left: 5%; animation-delay: 1s; animation-duration: 10s;"></div>
+        <div class="bubble" style="width: 120px; height: 120px; bottom: 10%; right: 15%; animation-delay: 3s; animation-duration: 18s;"></div>
+        <div class="bubble" style="width: 40px; height: 40px; top: 60%; left: 30%; animation-delay: 4s; animation-duration: 8s;"></div>
+        
+        <!-- Floating Particles -->
+        <div class="floating-dots">
+            <div class="dot" style="width: 6px; height: 6px; top: 10%; left: 20%; animation: float 8s infinite ease-in-out; animation-delay: 0s;"></div>
+            <div class="dot" style="width: 8px; height: 8px; top: 30%; left: 70%; animation: float 12s infinite ease-in-out; animation-delay: 1s;"></div>
+            <div class="dot" style="width: 4px; height: 4px; top: 70%; left: 40%; animation: float 10s infinite ease-in-out; animation-delay: 2s;"></div>
+            <div class="dot" style="width: 5px; height: 5px; top: 50%; left: 80%; animation: float 9s infinite ease-in-out; animation-delay: 3s;"></div>
+            <div class="dot" style="width: 7px; height: 7px; top: 80%; left: 10%; animation: float 11s infinite ease-in-out; animation-delay: 4s;"></div>
+            <div class="dot" style="width: 6px; height: 6px; top: 40%; left: 30%; animation: float 13s infinite ease-in-out; animation-delay: 2.5s;"></div>
+            <div class="dot" style="width: 4px; height: 4px; top: 60%; left: 60%; animation: float 14s infinite ease-in-out; animation-delay: 1.5s;"></div>
+            <div class="dot" style="width: 5px; height: 5px; top: 20%; left: 50%; animation: float 15s infinite ease-in-out; animation-delay: 3.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 md:px-12 py-12 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 fade-in">
+                        Potencia tu negocio con <span class="text-blue-300">estrategias digitales</span> efectivas
+                    </h1>
+                    <p class="text-lg text-blue-100 mb-8 fade-in" style="transition-delay: 0.2s">
+                        Somos expertos en marketing digital, desarrollo web y posicionamiento SEO. 
+                        Transformamos tu presencia online para alcanzar resultados extraordinarios.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 fade-in" style="transition-delay: 0.4s">
+                        <a href="#servicios" class="btn-primary text-white font-medium py-3 px-8 rounded-full text-center">
+                            Nuestros Servicios
+                        </a>
+                        <a href="#contacto" class="bg-transparent border-2 border-white text-white font-medium py-3 px-8 rounded-full hover:bg-white hover:text-[#0f2c59] transition-all duration-300 text-center">
+                            Contáctanos
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in" style="transition-delay: 0.6s">
+                    <svg class="w-full max-w-lg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M30,200 Q150,50 300,200 T500,200" stroke="url(#grad1)" stroke-width="5" fill="none" stroke-linecap="round">
+                            <animate attributeName="d" dur="10s" repeatCount="indefinite" values="M30,200 Q150,50 300,200 T500,200;
+                                                                                                M30,200 Q150,150 300,100 T500,200;
+                                                                                                M30,200 Q150,250 300,200 T500,200;
+                                                                                                M30,200 Q150,50 300,200 T500,200" />
+                        </path>
+                        <circle cx="250" cy="180" r="80" fill="#ffffff" opacity="0.2" />
+                        <g transform="translate(180, 120)">
+                            <rect x="0" y="0" width="140" height="120" rx="10" fill="#ffffff" />
+                            <rect x="10" y="10" width="120" height="15" rx="3" fill="#3b82f6" opacity="0.7" />
+                            <rect x="10" y="35" width="120" height="10" rx="3" fill="#dbeafe" />
+                            <rect x="10" y="55" width="80" height="10" rx="3" fill="#dbeafe" />
+                            <rect x="10" y="75" width="100" height="10" rx="3" fill="#dbeafe" />
+                            <rect x="10" y="95" width="60" height="15" rx="3" fill="#3b82f6" />
+                        </g>
+                        <g transform="translate(300, 180)">
+                            <circle cx="0" cy="0" r="40" fill="#3b82f6" opacity="0.8" />
+                            <path d="M-15,-5 L-5,-5 L-5,-15 L5,-15 L5,-5 L15,-5 L15,5 L5,5 L5,15 L-5,15 L-5,5 L-15,5 Z" fill="#ffffff" />
+                        </g>
+                        <g transform="translate(150, 220)">
+                            <polygon points="0,0 60,0 45,60 15,60" fill="#ffffff" opacity="0.6" />
+                            <line x1="15" y1="15" x2="45" y2="15" stroke="#3b82f6" stroke-width="3" />
+                            <line x1="20" y1="30" x2="40" y2="30" stroke="#3b82f6" stroke-width="3" />
+                            <line x1="25" y1="45" x2="35" y2="45" stroke="#3b82f6" stroke-width="3" />
+                        </g>
+                        
+                        <!-- Added decorative circles -->
+                        <circle cx="100" cy="100" r="10" fill="#3b82f6" opacity="0.3">
+                            <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="400" cy="300" r="15" fill="#3b82f6" opacity="0.2">
+                            <animate attributeName="r" values="15;20;15" dur="4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="450" cy="150" r="8" fill="#3b82f6" opacity="0.4">
+                            <animate attributeName="r" values="8;12;8" dur="5s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="80" cy="300" r="12" fill="#3b82f6" opacity="0.2">
+                            <animate attributeName="r" values="12;16;12" dur="6s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider">
+        <div class="divider-wave wave-top"></div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 px-6 md:px-12 bg-white relative">
+        <!-- Background Dots Pattern -->
+        <div class="absolute inset-0 bg-dots opacity-50"></div>
+        
+        <!-- Decorative Bubbles -->
+        <div class="absolute w-32 h-32 rounded-full bg-blue-100 opacity-30 top-20 left-10 blur-xl"></div>
+        <div class="absolute w-40 h-40 rounded-full bg-blue-100 opacity-20 bottom-40 right-10 blur-xl"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0f2c59] mb-4 fade-in">Nuestros Servicios</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto fade-in" style="transition-delay: 0.2s">
+                    Ofrecemos soluciones digitales completas para impulsar tu negocio al siguiente nivel.
+                    Cada servicio está diseñado para maximizar tu presencia online y generar resultados.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.3s">
+                    <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-hashtag text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Marketing en Redes Sociales</h3>
+                    <p class="text-gray-600 text-center">
+                        Estrategias personalizadas para aumentar tu visibilidad, engagement y conversiones en todas las plataformas sociales.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.4s">
+                    <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Desarrollo de Sistemas a Medida</h3>
+                    <p class="text-gray-600 text-center">
+                        Creamos soluciones tecnológicas adaptadas a tus necesidades específicas, optimizando tus procesos de negocio.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.5s">
+                    <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-paint-brush text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Diseño de Páginas Web</h3>
+                    <p class="text-gray-600 text-center">
+                        Sitios web atractivos, funcionales y responsivos que representan la identidad de tu marca y convierten visitantes en clientes.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.6s">
+                    <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Posicionamiento SEO</h3>
+                    <p class="text-gray-600 text-center">
+                        Optimizamos tu presencia en buscadores para aumentar tu visibilidad y atraer tráfico cualificado a tu sitio web.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.7s">
+                    <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Campañas de Publicidad Digital</h3>
+                    <p class="text-gray-600 text-center">
+                        Diseñamos y gestionamos campañas publicitarias efectivas en Google Ads, Facebook Ads y otras plataformas.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.8s">
+                    <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Analítica y Optimización</h3>
+                    <p class="text-gray-600 text-center">
+                        Medimos y analizamos resultados para optimizar estrategias y maximizar el retorno de tu inversión digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider">
+        <div class="divider-wave wave-bottom"></div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-20 px-6 md:px-12 gradient-bg text-white relative">
+        <!-- Decorative Bubbles -->
+        <div class="bubble" style="width: 180px; height: 180px; top: 15%; right: 5%; animation-delay: 1s; animation-duration: 20s;"></div>
+        <div class="bubble" style="width: 100px; height: 100px; bottom: 20%; left: 10%; animation-delay: 2s; animation-duration: 15s;"></div>
+        <div class="bubble" style="width: 70px; height: 70px; top: 40%; left: 20%; animation-delay: 3s; animation-duration: 12s;"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 fade-in">
+                    <svg class="w-full max-w-md mx-auto" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="250" cy="200" r="120" fill="#ffffff" opacity="0.1" />
+                        <circle cx="250" cy="200" r="100" fill="#ffffff" opacity="0.1" />
+                        <circle cx="250" cy="200" r="80" fill="#ffffff" opacity="0.1" />
+                        
+                        <!-- Team members -->
+                        <g transform="translate(250, 200)">
+                            <!-- Central person -->
+                            <circle cx="0" cy="0" r="40" fill="#3b82f6" />
+                            <circle cx="0" cy="-15" r="15" fill="#ffffff" />
+                            <path d="M-20,15 Q0,40 20,15" stroke="#ffffff" stroke-width="3" fill="none" />
+                            
+                            <!-- Team member 1 -->
+                            <g transform="translate(-80, -60)">
+                                <circle cx="0" cy="0" r="25" fill="#60a5fa" />
+                                <circle cx="0" cy="-10" r="10" fill="#ffffff" />
+                                <path d="M-12,10 Q0,25 12,10" stroke="#ffffff" stroke-width="2" fill="none" />
+                                <line x1="30" y1="30" x2="60" y2="50" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+                            </g>
+                            
+                            <!-- Team member 2 -->
+                            <g transform="translate(80, -60)">
+                                <circle cx="0" cy="0" r="25" fill="#60a5fa" />
+                                <circle cx="0" cy="-10" r="10" fill="#ffffff" />
+                                <path d="M-12,10 Q0,25 12,10" stroke="#ffffff" stroke-width="2" fill="none" />
+                                <line x1="-30" y1="30" x2="-60" y2="50" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+                            </g>
+                            
+                            <!-- Team member 3 -->
+                            <g transform="translate(-80, 60)">
+                                <circle cx="0" cy="0" r="25" fill="#60a5fa" />
+                                <circle cx="0" cy="-10" r="10" fill="#ffffff" />
+                                <path d="M-12,10 Q0,25 12,10" stroke="#ffffff" stroke-width="2" fill="none" />
+                                <line x1="30" y1="-30" x2="60" y2="-50" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+                            </g>
+                            
+                            <!-- Team member 4 -->
+                            <g transform="translate(80, 60)">
+                                <circle cx="0" cy="0" r="25" fill="#60a5fa" />
+                                <circle cx="0" cy="-10" r="10" fill="#ffffff" />
+                                <path d="M-12,10 Q0,25 12,10" stroke="#ffffff" stroke-width="2" fill="none" />
+                                <line x1="-30" y1="-30" x2="-60" y2="-50" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5" />
+                            </g>
+                        </g>
+                        
+                        <!-- Animated circles -->
+                        <circle cx="250" cy="200" r="150" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3">
+                            <animate attributeName="r" values="150;155;150" dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="250" cy="200" r="180" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.2">
+                            <animate attributeName="r" values="180;190;180" dur="6s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.2;0.05;0.2" dur="6s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <!-- Added decorative elements -->
+                        <circle cx="150" cy="100" r="8" fill="#ffffff" opacity="0.3">
+                            <animate attributeName="cy" values="100;110;100" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="350" cy="300" r="6" fill="#ffffff" opacity="0.3">
+                            <animate attributeName="cy" values="300;310;300" dur="4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="400" cy="150" r="5" fill="#ffffff" opacity="0.3">
+                            <animate attributeName="cy" values="150;160;150" dur="5s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 fade-in">Quiénes Somos</h2>
+                    <p class="mb-6 fade-in" style="transition-delay: 0.2s">
+                        Somos un equipo multidisciplinario de profesionales apasionados por el marketing digital y el desarrollo tecnológico. 
+                        Nuestra misión es ayudar a empresas de todos los tamaños a alcanzar su máximo potencial en el entorno digital.
+                    </p>
+                    <p class="mb-6 fade-in" style="transition-delay: 0.3s">
+                        Con más de 10 años de experiencia en el sector, hemos trabajado con clientes de diversas industrias, 
+                        implementando soluciones personalizadas que generan resultados tangibles y medibles.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-10 fade-in" style="transition-delay: 0.4s">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-300 mb-2">200+</div>
+                            <p class="text-blue-100">Proyectos Completados</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-300 mb-2">95%</div>
+                            <p class="text-blue-100">Clientes Satisfechos</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-300 mb-2">10+</div>
+                            <p class="text-blue-100">Años de Experiencia</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-300 mb-2">15</div>
+                            <p class="text-blue-100">Expertos en el Equipo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider">
+        <div class="divider-wave wave-top"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 px-6 md:px-12 bg-gray-50 relative">
+        <!-- Background Dots Pattern -->
+        <div class="absolute inset-0 bg-dots opacity-30"></div>
+        
+        <!-- Decorative Bubbles -->
+        <div class="absolute w-36 h-36 rounded-full bg-blue-100 opacity-30 top-40 right-10 blur-xl"></div>
+        <div class="absolute w-28 h-28 rounded-full bg-blue-100 opacity-20 bottom-20 left-10 blur-xl"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0f2c59] mb-4 fade-in">Contáctanos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto fade-in" style="transition-delay: 0.2s">
+                    ¿Listo para impulsar tu presencia digital? Completa el formulario y nos pondremos en contacto contigo a la brevedad.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 fade-in" style="transition-delay: 0.3s">
+                    <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+                        <!-- Decorative corner circles -->
+                        <div class="absolute w-16 h-16 rounded-full bg-blue-100 -top-8 -left-8"></div>
+                        <div class="absolute w-12 h-12 rounded-full bg-blue-100 -bottom-6 -right-6"></div>
+                        
+                        <div class="mb-6 relative z-10">
+                            <label for="name" class="block text-gray-700 mb-2">Nombre completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-6 relative z-10">
+                            <label for="email" class="block text-gray-700 mb-2">Correo electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="mb-6 relative z-10">
+                            <label for="phone" class="block text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu número de teléfono">
+                        </div>
+                        <div class="mb-6 relative z-10">
+                            <label for="service" class="block text-gray-700 mb-2">Servicio de interés</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="social-media">Marketing en Redes Sociales</option>
+                                <option value="custom-dev">Desarrollo de Sistemas a Medida</option>
+                                <option value="web-design">Diseño de Páginas Web</option>
+                                <option value="seo">Posicionamiento SEO</option>
+                                <option value="ads">Campañas de Publicidad Digital</option>
+                                <option value="analytics">Analítica y Optimización</option>
+                            </select>
+                        </div>
+                        <div class="mb-6 relative z-10">
+                            <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary text-white font-medium py-3 px-8 rounded-lg w-full relative z-10">Enviar mensaje</button>
+                        <p class="text-center text-sm text-gray-500 mt-4 relative z-10">Este es un formulario de demostración. En una implementación real, se conectaría a un backend para procesar los mensajes.</p>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in" style="transition-delay: 0.4s">
+                    <div class="bg-[#0f2c59] text-white p-8 rounded-xl shadow-lg h-full relative overflow-hidden">
+                        <!-- Decorative bubbles -->
+                        <div class="absolute w-32 h-32 rounded-full bg-blue-500 opacity-10 -top-10 -right-10"></div>
+                        <div class="absolute w-24 h-24 rounded-full bg-blue-500 opacity-10 bottom-20 -left-10"></div>
+                        
+                        <h3 class="text-2xl font-semibold mb-6 relative z-10">Información de Contacto</h3>
+                        
+                        <div class="flex items-start mb-6 relative z-10">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-blue-300">Dirección</h4>
+                                <p>Av. Principal 1234, Piso 5<br>Ciudad Empresarial, CP 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6 relative z-10">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-blue-300">Teléfono</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <p>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6 relative z-10">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-blue-300">Email</h4>
+                                <p>info@nuvexar.com</p>
+                                <p>soporte@nuvexar.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start relative z-10">
+                            <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-blue-300">Horario de Atención</h4>
+                                <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                                <p>Sábados: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 relative z-10">
+                            <h4 class="font-medium text-blue-300 mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-500 hover:bg-blue-600 transition-colors p-3 rounded-full">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-500 hover:bg-blue-600 transition-colors p-3 rounded-full">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-blue-500 hover:bg-blue-600 transition-colors p-3 rounded-full">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-500 hover:bg-blue-600 transition-colors p-3 rounded-full">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a1e3c] text-white py-12 px-6 md:px-12 relative">
+        <!-- Decorative Bubbles -->
+        <div class="absolute w-40 h-40 rounded-full bg-blue-900 opacity-30 top-10 left-10 blur-xl"></div>
+        <div class="absolute w-32 h-32 rounded-full bg-blue-900 opacity-20 bottom-10 right-10 blur-xl"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="mb-4">
+                        <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" class="h-8">
+                            <!-- Sol parcialmente escondido (como saliendo) -->
+                            <circle cx="95" cy="5" r="6" fill="#F9D71C" class="sun-rays" opacity="0.9" />
+                            
+                            <!-- Rayos del sol más prominentes -->
+                            <g class="sun-rays">
+                                <line x1="95" y1="-2" x2="95" y2="-5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="95" y1="12" x2="95" y2="15" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="88" y1="5" x2="85" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="102" y1="5" x2="105" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="90" y1="0" x2="87" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="100" y1="10" x2="103" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="90" y1="10" x2="87" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="100" y1="0" x2="103" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            </g>
+                            
+                            <!-- Texto Nuvexar como una sola palabra -->
+                            <text x="10" y="25" font-family="Poppins, sans-serif" font-size="24" font-weight="700">
+                                <tspan fill="#FFFFFF">Nuvex</tspan><tspan fill="#60A5FA">ar</tspan>
+                            </text>
+                        </svg>
+                    </div>
+                    <p class="text-blue-200 mb-6">
+                        Soluciones digitales integrales para potenciar tu negocio en el mundo online.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 title-links">Enlaces Rápidos</h3>
+                    <ul class="space-y-2 links">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="text-blue-200 hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-blue-200 hover:text-white transition-colors">Quiénes Somos</a></li>
+                        <li><a href="#contacto" class="text-blue-200 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 title-links">Servicios</h3>
+                    <ul class="space-y-2 links">
+                        <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Marketing en Redes Sociales</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Desarrollo de Sistemas</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Diseño Web</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Posicionamiento SEO</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 title-links">Contacto</h3>
+                    <ul class="space-y-2 links">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-blue-300"></i>
+                            <span class="text-blue-200">Av. Principal 1234, Piso 5<br>Ciudad Empresarial, CP 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-blue-300"></i>
+                            <span class="text-blue-200">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-300"></i>
+                            <span class="text-blue-200">info@nuvexar.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-200">
+                <p>&copy; 2023 Nuvexar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
