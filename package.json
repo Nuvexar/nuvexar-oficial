@@ -4,7 +4,7 @@
   "description": "Nuvexar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "npx tailwindcss -i .\\src\\css\\input.css -o .\\src\\css\\output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
     "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "shx": "^0.4.0"
   }
 }
