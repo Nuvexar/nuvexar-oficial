@@ -11,7 +11,6 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="./src/css/estilos.css">
     <link rel="stylesheet" href="./src/css/output.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Título -->
     <title>Document</title>
@@ -21,76 +20,76 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar fixed w-full z-50 py-4 px-6 md:px-12" role="navigation">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="logo-container">
-                    <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" aria-label="Logo de Nuvexar" role="img">
-                        <!-- Sol parcialmente escondido -->
-                        <circle cx="95" cy="5" r="6" fill="#F9D71C" class="sun-rays" opacity="0.9" />
-                        
-                        <!-- Rayos del sol -->
-                        <g class="sun-rays">
-                            <line x1="95" y1="-2" x2="95" y2="-5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                            <line x1="95" y1="12" x2="95" y2="15" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                            <line x1="88" y1="5" x2="85" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                            <line x1="102" y1="5" x2="105" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                            <line x1="90" y1="0" x2="87" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                            <line x1="100" y1="10" x2="103" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                            <line x1="90" y1="10" x2="87" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                            <line x1="100" y1="0" x2="103" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
-                        </g>
-                        
-                        <!-- Texto Nuvexar -->
-                        <text x="10" y="25" font-family="Poppins, sans-serif" font-size="24" font-weight="700">
-                            <tspan fill="#FFFFFF">Nuvex</tspan><tspan fill="#60A5FA">ar</tspan>
-                        </text>
-                    </svg>
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="logo-container">
+                        <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" aria-label="Logo de Nuvexar" role="img">
+                            <!-- Sol parcialmente escondido -->
+                            <circle cx="95" cy="5" r="6" fill="#F9D71C" class="sun-rays" opacity="0.9" />
+                            
+                            <!-- Rayos del sol -->
+                            <g class="sun-rays">
+                                <line x1="95" y1="-2" x2="95" y2="-5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="95" y1="12" x2="95" y2="15" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="88" y1="5" x2="85" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="102" y1="5" x2="105" y2="5" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="90" y1="0" x2="87" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="100" y1="10" x2="103" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="90" y1="10" x2="87" y2="13" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                                <line x1="100" y1="0" x2="103" y2="-3" stroke="#F9D71C" stroke-width="1.8" class="sun-ray" />
+                            </g>
+                            
+                            <!-- Texto Nuvexar -->
+                            <text x="10" y="25" font-family="Poppins, sans-serif" font-size="24" font-weight="700">
+                                <tspan fill="#FFFFFF">Nuvex</tspan><tspan fill="#60A5FA">ar</tspan>
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li>
+                        <a href="#home" class="text-white hover:text-blue-300 transition-colors">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#servicios" class="text-white hover:text-blue-300 transition-colors">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#nosotros" class="text-white hover:text-blue-300 transition-colors">Quiénes Somos</a>
+                    </li>
+                    <li>
+                        <a href="#contacto" class="text-white hover:text-blue-300 transition-colors">Contacto</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="hamburger">
+                        <span class="hamburger-top"></span>
+                        <span class="hamburger-middle"></span>
+                        <span class="hamburger-bottom"></span>
+                    </button>
                 </div>
             </div>
             
-            <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-8">
-                <li>
-                    <a href="#home" class="text-white hover:text-blue-300 transition-colors">Inicio</a>
-                </li>
-                <li>
-                    <a href="#servicios" class="text-white hover:text-blue-300 transition-colors">Servicios</a>
-                </li>
-                <li>
-                    <a href="#nosotros" class="text-white hover:text-blue-300 transition-colors">Quiénes Somos</a>
-                </li>
-                <li>
-                    <a href="#contacto" class="text-white hover:text-blue-300 transition-colors">Contacto</a>
-                </li>
-            </ul>
-            
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-btn" class="hamburger">
-                    <span class="hamburger-top"></span>
-                    <span class="hamburger-middle"></span>
-                    <span class="hamburger-bottom"></span>
-                </button>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-[#0f2c59] py-8 px-6 md:hidden">
+                <ul class="flex flex-col space-y-6 items-center">
+                    <li>
+                        <a href="#home" class="text-white hover:text-blue-300 transition-colors">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#servicios" class="text-white hover:text-blue-300 transition-colors">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#nosotros" class="text-white hover:text-blue-300 transition-colors">Quiénes Somos</a>
+                    </li>
+                    <li>
+                        <a href="#contacto" class="text-white hover:text-blue-300 transition-colors">Contacto</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-[#0f2c59] py-8 px-6 md:hidden">
-            <ul class="flex flex-col space-y-6 items-center">
-                <li>
-                    <a href="#home" class="text-white hover:text-blue-300 transition-colors">Inicio</a>
-                </li>
-                <li>
-                    <a href="#servicios" class="text-white hover:text-blue-300 transition-colors">Servicios</a>
-                </li>
-                <li>
-                    <a href="#nosotros" class="text-white hover:text-blue-300 transition-colors">Quiénes Somos</a>
-                </li>
-                <li>
-                    <a href="#contacto" class="text-white hover:text-blue-300 transition-colors">Contacto</a>
-                </li>
-            </ul>
-        </div>
         </nav>
     </header>
 
@@ -592,7 +591,7 @@
                 <div>
                     <div class="mb-4">
                         <svg viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" class="h-8" aria-label="Logo de Nuvexar" role="img">
-                            <!-- Sol parcialmente escondido (como saliendo) -->
+                            <!-- Sol parcialmente escondido -->
                             <circle cx="95" cy="5" r="6" fill="#F9D71C" class="sun-rays" opacity="0.9" />
                             
                             <!-- Rayos del sol más prominentes -->
