@@ -21,19 +21,38 @@ window.addEventListener("scroll", () => {
 // Fade-in animation on scroll
 const fadeElements = document.querySelectorAll(".fade-in");
 
-const fadeInOnScroll = () => {
-  fadeElements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementBottom = element.getBoundingClientRect().bottom;
-
-    if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
-      element.classList.add("active");
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // deja de observar para no recalcular
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px 0px -100px 0px", // dispara un poco antes de llegar al viewport si se quiere
+      threshold: 0.05,
     }
-  });
-};
+  );
 
-// Initial check for elements in view
-fadeInOnScroll();
+  fadeElements.forEach((el) => io.observe(el));
+} else {
+  // Fallback simple si no hay IntersectionObserver
+  const fadeInOnScroll = () => {
+    fadeElements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+      const elementBottom = element.getBoundingClientRect().bottom;
+      if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+        element.classList.add("active");
+      }
+    });
+  };
+  fadeInOnScroll();
+  window.addEventListener("scroll", fadeInOnScroll, { passive: true });
+}
 
 // Initial check for elements in view
 window.addEventListener('load', () => {
