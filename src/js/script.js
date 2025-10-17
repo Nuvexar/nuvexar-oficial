@@ -7,17 +7,6 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
-// Navbar scroll effect
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
 // Fade-in animation on scroll
 const fadeElements = document.querySelectorAll(".fade-in");
 
@@ -43,6 +32,7 @@ if ("IntersectionObserver" in window) {
   // Fallback simple si no hay IntersectionObserver
   const fadeInOnScroll = () => {
     fadeElements.forEach((element) => {
+      console.log(fadeElements)
       const elementTop = element.getBoundingClientRect().top;
       const elementBottom = element.getBoundingClientRect().bottom;
       if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
@@ -52,18 +42,13 @@ if ("IntersectionObserver" in window) {
   };
   fadeInOnScroll();
   window.addEventListener("scroll", fadeInOnScroll, { passive: true });
-}
-
-// Initial check for elements in view
-window.addEventListener('load', () => {
-    fadeInOnScroll();
-});
+} 
 
 // Check on scroll (optimizado con debounce)
 let scrollTimeout;
 window.addEventListener('scroll', () => {
     clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(fadeInOnScroll, 100);
+    scrollTimeout = setTimeout(100);
 });
 
 // Form submission
