@@ -2,13 +2,27 @@
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("open");
-  mobileMenu.classList.toggle("hidden");
-});
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("open");
+    mobileMenu.classList.toggle("open");
+  });
+}
 
 // Fade-in animation on scroll
 const fadeElements = document.querySelectorAll(".fade-in");
+
+// Función para activar elementos .fade-in visibles
+function fadeInOnScroll() {
+  const els = document.querySelectorAll(".fade-in");
+  const offset = 100;
+  els.forEach((el) => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight - offset && r.bottom > 0) {
+      el.classList.add("active");
+    }
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver(
@@ -29,27 +43,22 @@ if ("IntersectionObserver" in window) {
 
   fadeElements.forEach((el) => io.observe(el));
 } else {
-  // Fallback simple si no hay IntersectionObserver
-  const fadeInOnScroll = () => {
-    fadeElements.forEach((element) => {
-      console.log(fadeElements)
-      const elementTop = element.getBoundingClientRect().top;
-      const elementBottom = element.getBoundingClientRect().bottom;
-      if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
-        element.classList.add("active");
-      }
-    });
-  };
   fadeInOnScroll();
   window.addEventListener("scroll", fadeInOnScroll, { passive: true });
 } 
 
-// Check on scroll (optimizado con debounce)
+// Debounce correcto: llamar a fadeInOnScroll periódicamente si es necesario
 let scrollTimeout;
-window.addEventListener('scroll', () => {
+window.addEventListener(
+  "scroll",
+  () => {
     clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(100);
-});
+    scrollTimeout = setTimeout(() => {
+      fadeInOnScroll();
+    }, 100);
+  },
+  { passive: true }
+);
 
 // Form submission
 const contactForm = document.getElementById("contact-form");
@@ -79,7 +88,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
     // Close mobile menu if open
     if (!mobileMenu.classList.contains("hidden")) {
-      mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("open");
       menuBtn.classList.remove("open");
     }
 
@@ -96,7 +105,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Create floating particles effect
-function createParticles() {
+function createParticlesIndex() {
   const sections = document.querySelectorAll(".gradient-bg");
 
   sections.forEach((section) => {
@@ -125,8 +134,39 @@ function createParticles() {
   });
 }
 
+// Create floating particles effect
+function createParticlesOthers() {
+  const sections = document.querySelectorAll(".gradient-bg-other");
+
+  sections.forEach((section) => {
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+
+      // Random size between 2px and 6px
+      const size = Math.random() * 4 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+
+      // Random position
+      const posX = Math.random() * 100;
+      const posY = Math.random() * 100;
+      particle.style.left = `${posX}%`;
+      particle.style.top = `${posY}%`;
+
+      // Random animation
+      const duration = Math.random() * 20 + 10;
+      const delay = Math.random() * 5;
+      particle.style.animation = `float ${duration}s ${delay}s infinite ease-in-out`;
+
+      section.appendChild(particle);
+    }
+  });
+}
+
 // Initialize particles
-createParticles();
+createParticlesIndex()
+createParticlesOthers();
 
 // Tab functionality for clients section
 const tabWebsites = document.getElementById('tab-websites');
@@ -142,11 +182,13 @@ function activarTab(tabActiva, tabInactiva, contenidoMostrar, contenidoOcultar) 
   fadeInOnScroll();
 }
 
-// Eventos
-tabWebsites.addEventListener("click", () => {
-  activarTab(tabWebsites, tabSocial, websitesContent, socialContent);
-});
+// Eventos (verificar existencia)
+if (tabWebsites && tabSocial && websitesContent && socialContent) {
+  tabWebsites.addEventListener("click", () => {
+    activarTab(tabWebsites, tabSocial, websitesContent, socialContent);
+  });
 
-tabSocial.addEventListener("click", () => {
-  activarTab(tabSocial, tabWebsites, socialContent, websitesContent);
-});
+  tabSocial.addEventListener("click", () => {
+    activarTab(tabSocial, tabWebsites, socialContent, websitesContent);
+  });
+}

@@ -9,9 +9,34 @@ body {
     overflow-x: hidden;
 }
 
-.gradient-bg {
-    background: linear-gradient(135deg, #0f2c59 0%, #1a3a6a 50%, #2a4d8f 100%);
+.paytone-one-regular {
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.funte-logo {
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gradient-bg {
+    background: 
+    radial-gradient(circle at 80% 10%, rgba(18, 43, 185, 0.8), transparent 50%),
+    radial-gradient(circle at 30% 0%, black, transparent 60%),
+    radial-gradient(circle at 20% 80%, black, transparent 100%),
+    linear-gradient(45deg, #05002a 0%, #000000 25%, #0b0565 50%, #0032b8 75%, #64b5ff 100%);
+    background-blend-mode: screen, lighten, multiply, normal;
+    background-attachment: fixed;
+}
+
+.gradient-bg-other {
+    background: linear-gradient(135deg, #0f2c59 0%, #1a3a6a 50%, #2a4d8f 100%);
+    position: relative;
+    overflow: hidden;
+}
+
 
 .bubble {
     position: absolute;
@@ -86,7 +111,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -99,7 +124,7 @@ body {
     left: 50%;
     width: 10px;
     height: 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(99, 94, 94, 0.164);
     border-radius: 50%;
     transform: scale(0) translate(-50%, -50%);
     transform-origin: left top;
@@ -112,7 +137,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 10px 15px -3px rgb(176 188 209 / 50%)
 }
 
 .fade-in {
@@ -128,11 +153,31 @@ body {
 
 .navbar {
     transition: all 0.5s ease;
+    background-color: #000000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
-    background-color: rgba(15, 44, 89, 0.95);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+#mobile-menu {
+    background-color: #000000;
+
+}
+
+/* Estado abierto */
+#mobile-menu.open {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+#mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none; /* evita clicks mientras está cerrado */
 }
 
 .hamburger {
@@ -236,6 +281,9 @@ body {
 .logo-container svg {
     height: 32px;
     width: auto;
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 @keyframes sunGlow {
