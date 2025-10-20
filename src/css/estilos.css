@@ -28,7 +28,6 @@ body {
     radial-gradient(circle at 20% 80%, black, transparent 100%),
     linear-gradient(45deg, #05002a 0%, #000000 25%, #0b0565 50%, #0032b8 75%, #64b5ff 100%);
     background-blend-mode: screen, lighten, multiply, normal;
-    background-attachment: fixed;
 }
 
 .gradient-bg-other {
