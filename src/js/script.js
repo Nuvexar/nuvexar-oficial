@@ -1,4 +1,3 @@
-// Mobile menu toggle
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -36,7 +35,7 @@ if ("IntersectionObserver" in window) {
     },
     {
       root: null,
-      rootMargin: "0px 0px -100px 0px", // dispara un poco antes de llegar al viewport si se quiere
+      rootMargin: "0px 0px 0px 0px",
       threshold: 0.05,
     }
   );
@@ -104,7 +103,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Create floating particles effect
+// Crea el efecto de las partículas flotantes
 function createParticlesIndex() {
   const sections = document.querySelectorAll(".gradient-bg");
 
@@ -134,7 +133,7 @@ function createParticlesIndex() {
   });
 }
 
-// Create floating particles effect
+// Crea el efecto de las partículas flotantes
 function createParticlesOthers() {
   const sections = document.querySelectorAll(".gradient-bg-other");
 
@@ -164,7 +163,6 @@ function createParticlesOthers() {
   });
 }
 
-// Initialize particles
 createParticlesIndex()
 createParticlesOthers();
 
@@ -182,7 +180,6 @@ function activarTab(tabActiva, tabInactiva, contenidoMostrar, contenidoOcultar) 
   fadeInOnScroll();
 }
 
-// Eventos (verificar existencia)
 if (tabWebsites && tabSocial && websitesContent && socialContent) {
   tabWebsites.addEventListener("click", () => {
     activarTab(tabWebsites, tabSocial, websitesContent, socialContent);
