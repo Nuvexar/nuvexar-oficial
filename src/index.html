@@ -498,7 +498,7 @@
                 
                 <div class="flex flex-col lg:flex-row gap-12">
                     <div class="lg:w-1/2 fade-in" style="transition-delay: 0.3s">
-                        <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
+                        <form id="contactForm" class="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden">
                             <!-- Decorative corner circles -->
                             <div class="absolute w-16 h-16 rounded-full bg-blue-100 -top-8 -left-8"></div>
                             <div class="absolute w-12 h-12 rounded-full bg-blue-100 -bottom-6 -right-6"></div>
@@ -528,10 +528,16 @@
                             </div>
                             <div class="mb-6 relative z-10">
                                 <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
-                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="¿Cómo podemos ayudarte?" required style="resize: none;"></textarea>
                             </div>
-                            <button type="submit" class="btn-primary text-white font-medium py-3 px-8 rounded-lg w-full relative z-10">Enviar mensaje</button>
-                            <p class="text-center text-sm text-gray-500 mt-4 relative z-10">Este es un formulario de demostración. En una implementación real, se conectaría a un backend para procesar los mensajes.</p>
+                            <button id="btn-enviar" type="submit" class="btn-primary text-white font-medium py-3 px-8 rounded-lg w-full relative z-10">
+                                <svg id="spinner-enviar" class="h-5 w-5 animate-spin text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+
+                                <span id="texto-boton">Enviar mensaje</span>
+                            </button>
                         </form>
                     </div>
                     
@@ -710,6 +716,23 @@
         </div>
     </footer>
 
+    <!-- Toast Tailwind -->
+    <div id="estado-toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 max-w-sm w-full rounded-xl hidden">
+        <div id="toast-contenido" class="flex items-center justify-between gap-4 px-4 py-3 rounded-lg shadow-md text-white" role="alert" aria-live="assertive" aria-atomic="true">
+            <span id="toast-mensaje" class="text-sm">Enviando mensaje...</span>
+            <button id="toast-cerrar" class="text-white hover:opacity-70 focus:outline-none cursor-pointer">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 
+                    1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 
+                    1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 
+                    5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Icono WhatsApp flotante -->
     <a class="btn-wsp" href="https://wa.me/5493513405803?text=¡Hola!%20😊%20Buen%20día.%20Me%20gustaría%20recibir%20un%20poco%20más%20de%20información%20sobre%20los%20servicios%20que%20ofrecen." target="_blank">
         <img src="./assets/icons/solid/icon-whatsapp.svg" alt="Icono de WhatsApp">
@@ -717,5 +740,6 @@
     
     <!-- Scripts -->
     <script src="./js/script.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 </html>
