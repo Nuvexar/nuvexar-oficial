@@ -392,9 +392,12 @@ form .btn-primary::after {
     }
 
     form label,
-    input::placeholder,
-    textarea {
+    input::placeholder{
         font-size: 14px;
+    }
+
+    textarea {
+        font-size: 16px
     }
 
     footer .title-links {
