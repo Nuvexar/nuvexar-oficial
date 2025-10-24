@@ -7,10 +7,10 @@
 // como "Enviando...", éxito o error, y mejora la seguridad del formulario.
 // ============================
 
-const FORMSPREE_URL = 'https://formspree.io/f/xeozglpa'; // URL del endpoint de Formspree
-const SIMULAR_ENVIO_CORREO = true; // ← Cambiar a false en producción para enviar correos reales
+const FORMSPREE_URL = 'https://formspree.io/f/mnndejao'; // URL del endpoint de Formspree
+const SIMULAR_ENVIO_CORREO = false; // ← Cambiar a false en producción para enviar correos reales
 // Clave pública (site key) de Google reCAPTCHA v3 para validar solicitudes del formulario y proteger contra bots
-const RECAPTCHA_SITE_KEY = '6LfPZpArAAAAAOV6eXvXKJqD4O1xlBD3Dz5aBqTt'; 
+const RECAPTCHA_SITE_KEY = '6Ldkj0srAAAAAH8QhpzHEsARXjqfbnR3mIOyBsOQ'; 
 
 document.getElementById('contactForm').addEventListener('submit', async (event) => {
     event.preventDefault();
