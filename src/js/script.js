@@ -59,27 +59,6 @@ window.addEventListener(
   { passive: true }
 );
 
-// Form submission
-// const contactForm = document.getElementById("contact-form");
-
-// contactForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   const name = document.getElementById("name").value;
-//   const email = document.getElementById("email").value;
-
-//   // Simple validation
-//   if (name && email) {
-//     // In a real implementation, this would send data to a server
-//     alert(
-//       `¡Gracias ${name}! Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.`
-//     );
-//     contactForm.reset();
-//   } else {
-//     alert("Por favor completa todos los campos requeridos.");
-//   }
-// });
-
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
