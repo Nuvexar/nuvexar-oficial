@@ -41,9 +41,6 @@ if ("IntersectionObserver" in window) {
   );
 
   fadeElements.forEach((el) => io.observe(el));
-} else {
-  fadeInOnScroll();
-  window.addEventListener("scroll", fadeInOnScroll, { passive: true });
 } 
 
 // Debounce correcto: llamar a fadeInOnScroll periódicamente si es necesario
