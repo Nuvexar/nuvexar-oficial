@@ -8,11 +8,23 @@
     <meta name="description" content="Nuvexar es una emprendimiento digital en Córdoba que ayuda a emprendedores y pequeños locales a crecer online. Creamos sitios web responsive, gestionamos redes sociales y realizamos campañas de marketing digital para impulsar tu negocio.">
     <meta name="keywords" content="diseño web, desarrollo web, diseño web Córdoba, marketing digital, redes sociales, community manager, SEO, posicionamiento web, publicidad digital, landing pages, sitios responsivos, pequeñas empresas, emprendimiento local">
     <meta name="author" content="Kevin Acarapi, Pablo Nieva, Cesar Paredes">
+    <!-- Aplica carga de forma asincrónica -->
+    <link rel="preload" href="./css/output.css" as="style">
+    <link rel="stylesheet" href="./css/output.css" media="print" onload="this.media='all'">
+    <!-- Fallback sin JS -->
+    <noscript>
+        <link rel="stylesheet" href="./css/output.css">
+    </noscript>
+    <!-- PRECARGA de todas las variantes de Poppins utilizadas -->
+    <link rel="preload" href="./assets/fonts/Poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Poppins/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Estilos -->
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/output.css">
     <!-- Icono -->
-     <link rel="shortcut icon" href="./assets/img/logo-nuvexar-circular.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/logo-nuvexar-circular.webp" type="image/x-icon">
     <!-- Título -->
     <title>Nuvexar</title>
 </head>
