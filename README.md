@@ -33,8 +33,8 @@ npm install
     Herramienta para compilar Tailwind CSS sin configuraciones
     avanzadas.
 
--   **[`npx`](https://www.npmjs.com/package/npx)**\
-    Ejecutador de paquetes de Node que permite correr herramientas y scripts sin necesidad de instalarlos globalmente. Facilita usar comandos como tailwindcss, vite, eslint, etc., directamente desde la terminal.
+-   **[`shx`](https://www.npmjs.com/package/shx)**\
+    Provee comandos `sh` multiplataforma (`cp`, `mkdir`, etc.) que funcionan en todos los sistemas operativos sin problemas.
 
 ------------------------------------------------------------------------
 
