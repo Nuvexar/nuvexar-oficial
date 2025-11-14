@@ -179,7 +179,7 @@
                         </p>
                     </div>
                     
-                    <!-- Service 3 -->
+                    <!-- Service 2 -->
                     <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.5s">
                         <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <svg class="text-2xl align-middle" width="1.3em" height="1.3em" viewBox="0 0 650 650" fill="currentColor" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
@@ -190,11 +190,11 @@
 
                         <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Diseño de Páginas Web</h3>
                         <p class="text-gray-600 text-center">
-                            Sitios web atractivos, funcionales y responsivos que representan la identidad de tu marca y convierten visitantes en clientes.
+                            Creamos tu página web moderna, clara y profesional, ideal para mostrar tus servicios o emprendimiento de manera simple y efectiva.
                         </p>
                     </div>
                     
-                    <!-- Service 4 -->
+                    <!-- Service 3 -->
                     <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.6s">
                         <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <svg class="text-2xl align-middle" width="1.3em" height="1.3em" viewBox="0 0 650 650" fill="currentColor" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
@@ -207,7 +207,7 @@
                         </p>
                     </div>
                     
-                    <!-- Service 5 -->
+                    <!-- Service 4 -->
                     <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.7s">
                         <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <svg class="text-2xl align-middle" width="1.3em" height="1.3em" viewBox="0 0 650 650" fill="currentColor" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
@@ -217,6 +217,19 @@
                         <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Campañas de Publicidad Digital</h3>
                         <p class="text-gray-600 text-center">
                             Ayudamos a tu marca a ganar visibilidad con anuncios en Facebook, Instagram, Google para que más personas conozcan tus productos o servicios.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card bg-white rounded-xl shadow-lg p-8 fade-in" style="transition-delay: 0.7s">
+                        <div class="service-icon bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg class="text-2xl align-middle" width="1.3em" height="1.3em" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+                                <path d="M256 32C167.6 32 96 103.6 96 192c0 106.1 140.3 266.2 148.6 275.3 5.9 6.5 16 6.5 21.9 0C275.7 458.2 416 298.1 416 192 416 103.6 344.4 32 256 32zm0 240c-44.1 0-80-35.9-80-80s35.9-80 80-80c44.1 0 80 35.9 80 80s-35.9 80-80 80z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#0f2c59] mb-4 text-center">Optimización y Presencia en Google Mapsl</h3>
+                        <p class="text-gray-600 text-center">
+                            Optimizamos la ficha de tu negocio en Google Maps para ayudarte a mejorar tu presencia local y facilitar que más personas te encuentren.
                         </p>
                     </div>
                 </div>
@@ -523,10 +536,11 @@
                             <div class="mb-6 relative z-10">
                                 <label for="phone" class="block text-gray-700 mb-2">Teléfono</label>
                                 <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu número de teléfono">
-                            </div>
+                            </div> 
                             <div class="mb-6 relative z-10">
                                 <label for="service" class="block text-gray-700 mb-2">Servicio de interés</label>
-                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <select id="service" name="service"
+                                    class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none">
                                     <option value="">Selecciona un servicio</option>
                                     <option value="Marketing en redes sociales">Marketing en Redes Sociales</option>
                                     <option value="Diseño de paginas web">Diseño de Páginas Web</option>
@@ -534,7 +548,14 @@
                                     <option value="Campañas de publicidad digital">Campañas de Publicidad Digital</option>
                                     <option value="Otro">Otro</option>
                                 </select>
+
+                                <!-- Flecha personalizada -->
+                                <svg class="w-5 h-5 text-gray-500 absolute right-3 top-[55px] transform -translate-y-1/2 pointer-events-none"
+                                    fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
                             </div>
+                            
                             <div class="mb-6 relative z-10">
                                 <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
                                 <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="¿Cómo podemos ayudarte?" required style="resize: none;"></textarea>
@@ -586,7 +607,6 @@
                             
                             <div class="flex items-start mb-6 relative z-10">
                                 <div class="bg-blue-500 p-3 rounded-full mr-4">
-                                    <!--<i class="fas fa-envelope"></i>-->
                                     <svg class="text-white block align-middle" width="1.1em" viewBox="70 70 500 500" fill="currentColor" aria-hidden="true">
                                         <path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
                                     </svg>
